@@ -12,6 +12,8 @@
 
     <!--Bootstrap Icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!--my css-->
     <link rel="stylesheet" href="style.css">
     <style>
@@ -54,9 +56,10 @@
     <!--akhir navbar-->
     <!--jumbotron-->
     <section class="jumbotron text-center">
-        <img src="./bck_mrh.jpeg" alt="Dina_jkl" width="250" class="rounded-circle img-thumbnail foto" />
-        <h1 class="display-6">Dina Linda Sari</h1>
-        <p class="lead">Student | SMK Negeri 40 Jakarta</p>
+        <img src="./bck_mrh.jpeg" alt="Dina_jkl" width="250" class="rounded-circle img-thumbnail foto"
+            data-aos="fade-down" />
+        <h1 class="display-6" data-aos="fade-down-left">Dina Linda Sari</h1>
+        <p class="lead" data-aos="fade-down-left">Student | SMK Negeri 40 Jakarta</p>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#ffff" fill-opacity="20"
                 d="M0,32L48,37.3C96,43,192,53,288,90.7C384,128,480,192,576,192C672,192,768,128,864,117.3C960,107,1056,149,1152,149.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
@@ -68,16 +71,17 @@
     <section id="about">
         <div class="container">
             <div class="row text-center mb-3">
-                <div class="col">
+                <div class="col" data-aos="fade-down">
                     <h2>About me</h2>
+                    <br>
                 </div>
             </div>
-            <div class="row justify-content-center fs-5 text-center">
-                <div class="col-4">
+            <div class="row justify-content-center fs-5 text-center ">
+                <div class="col-4" data-aos="fade-right">
                     <p><a>Nama saya Dina Linda Sari saya tinggal di Jln. Cipinang Pulomaja No.27 Rt 01 Rw 011 dan saya
                             sedang bersekolah di SMK Negeri 40 Jakarta.</a></p>
                 </div>
-                <div class="col-4">
+                <div class="col-4" data-aos="fade-left">
                     <p>Tujuan : saya membuat website ini untuk mengembangkan kemampuan dan keterampilan saya dalam
                         membuat website.</p>
                 </div>
@@ -95,16 +99,16 @@
     <section id="projects">
         <div class="container">
             <div class="row text-center">
-                <div class="col">
+                <div class="col" data-aos="fade-down">
                     <h2><b>Gallery</b></h2>
+                    <br>
+                    <br>
                 </div>
-
-
             </div>
 
             <div class="row justify-content-center">
                 <div class="col-md-4 mb-3">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 18rem;" data-aos="flip-left">
                         <img src="gambar 2.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <p class="card-text">MY SELF</p>
@@ -112,7 +116,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <div class="card" style="width: 22rem;">
+                    <div class="card" style="width: 22rem;" data-aos="flip-left">
                         <img src="./gambar 3.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <p class="card-text">MY DOLL</p>
@@ -121,7 +125,7 @@
                 </div>
 
                 <div class="col-md-4 mb-3">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 18rem;" data-aos="flip-left">
                         <img src="gambar 1.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <p class="card-text">MY FRIENDS</p>
@@ -154,26 +158,32 @@
 
             <div class="row justify-content-center">
                 <div class="col-md-6">
-                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                    <div class="alert alert-success alert-dismissible fade show d-none" role="alert">
+                        <strong>Terimakasih</strong> Pesan Anda Terkirim.
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                      </div>
-                    <form>
+                    </div>
+                    <form name="wpu-contact-form">
 
                         <div class="mb-3">
                             <label for="name" class="form-label">Nama Lengkap</label>
-                            <input type="name" class="form-control" id="name" aria-describedby="emailHelp">
+                            <input type="name" class="form-control" id="name" name="nama" aria-describedby="emailHelp">
                         </div>
                         <div class="mb-3">
                             <label for="Email" class="form-label">Email</label>
-                            <input type="Email" class="form-control" id="Email" aria-describedby="emailHelp">
+                            <input type="Email" class="form-control" id="Email" name="email"
+                                aria-describedby="emailHelp">
                         </div>
                         <div class="mb-3">
                             <label for="Pesan" class="form-label">Pesan</label>
-                            <textarea class="form-control" id="Pesan" rows="3"></textarea>
+                            <textarea class="form-control" id="Pesan" name="pesan" rows="3"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary bg-info">Kirim</button>
-
+                        <button type="submit" class="btn btn-primary btn-kirim">
+                            Kirim
+                        </button>
+                        <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            Loading...
+                        </button>
                     </form>
                 </div>
             </div>
@@ -190,27 +200,49 @@
     <!--footer-->
     <footer class="bg-info text-white text-center pb-3">
         <p>Created with <i class="bi bi-heart-fill text-danger"></i> by
-            <a href="http://instagram.com/dinaasarii10/"
-                class="text-white fw-bold">dindin</a>
+            <a href="http://instagram.com/dinaasarii10/" class="text-white fw-bold">dindin</a>
         </p>
     </footer>
     <!--Akhir footer-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js "
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM "
         crossorigin="anonymous "></script>
-     
 
-        <script>
-            const scriptURL = '<https://script.google.com/macros/s/AKfycbx30aye7141aJPvBhTzUlR3gHuQFkWmC3i90jJbFhzfwHDvqR7-UdZuhubDNmQOe7zs/execRL>'
-            const form = document.forms['wpu-contact-form']
-          
-            form.addEventListener('submit', e => {
-              e.preventDefault()
-              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => console.log('Success!', response))
-                .catch(error => console.error('Error!', error.message))
-            })
-          </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 3000,
+        });
+    </script>
+
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx30aye7141aJPvBhTzUlR3gHuQFkWmC3i90jJbFhzfwHDvqR7-UdZuhubDNmQOe7zs/exec'
+        const form = document.forms['wpu-contact-form']
+        const btnKirim = document.querySelector(".btn-kirim");
+        const btnLoading = document.querySelector(".btn-loading");
+        const alert = document.querySelector(".alert");
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            // ketika tombol submit diklik
+            // tampilkan tombol loading, hilangkan tombol kirim
+            btnLoading.classList.toggle("d-none");
+            btnKirim.classList.toggle("d-none");
+            fetch(scriptURL, { method: "POST", body: new FormData(form) })
+                .then((response) => {
+                    // tampilkan tombol kirim, hilangkan tombol loading
+                    btnLoading.classList.toggle("d-none");
+                    btnKirim.classList.toggle("d-none");
+                    // tampilkan allert
+                    alert.classList.toggle("d-none");
+                    // reset formnya
+                    form.reset();
+                    console.log("Success!", response);
+                })
+                .catch((error) => console.error("Error!", error.message));
+        });
+    </script>
 
 </body>
 
